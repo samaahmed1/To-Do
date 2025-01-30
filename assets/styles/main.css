@@ -3,8 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --bg-color: #ffffff;
+  --text-colr: #ffffff;
+  --main-color: #ab92e1;
+  --secondary-color: #654ea3;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+.dark-theme {
+  --bg-color: #000;
+  --text-colr: #000;
 }
 .container {
   margin: auto;
