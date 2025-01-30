@@ -7,7 +7,7 @@
   --bg-color: #ffffff;
   --text-colr: #ffffff;
   --main-color: #ab92e1;
-  --secondary-color: #654ea3;
+  --secondary-color: #8562d0;
 }
 body {
   background-color: var(--bg-color);
@@ -15,7 +15,6 @@ body {
 }
 .dark-theme {
   --bg-color: #000;
-  --text-colr: #000;
 }
 .container {
   margin: auto;
@@ -58,5 +57,34 @@ header .container img {
   padding: 6px;
   cursor: pointer;
   border-radius: 50px;
+  background-color: var(--secondary-color);
+}
+.task-adder {
+  padding: 50px 0;
+}
+.task-adder .container div {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task-adder .container div .task-input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 3px;
+  color: var(--text-colr);
+  background-color: var(--main-color);
+  border-left: 6px solid var(--secondary-color);
+}
+.task-adder .container div .task-btn {
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: var(--text-colr);
   background-color: var(--secondary-color);
 }

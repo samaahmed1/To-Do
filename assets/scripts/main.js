@@ -7,3 +7,14 @@ document.getElementById("toggle").onclick = () => {
     document.getElementById("toggle").src = "assets/icons/moon-dark.webp";
   }
 };
+let taskButton = document.getElementById("task-btn");
+taskButton.onclick = () => {
+  let taskInput = document.getElementById("task-input");
+  if (taskInput.value === "") {
+    taskButton.ariaDisabled = true;
+    taskButton.style.backgroundColor = "#dcd0f9";
+  } else {
+    taskButton.ariaDisabled = false;
+    taskButton.style.backgroundColor = "#8562d0";
+  }
+};
