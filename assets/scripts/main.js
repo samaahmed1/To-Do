@@ -7,6 +7,7 @@ document.getElementById("toggle").onclick = () => {
     document.getElementById("toggle").src = "assets/icons/moon-dark.webp";
   }
 };
+
 let taskInput = document.getElementById("task-input");
 let taskButton = document.getElementById("task-btn");
 let taskList = document.getElementById("list");
@@ -23,4 +24,13 @@ function checkTextInput() {
     taskButton.style.backgroundColor = "#8562d0";
   }
 }
-document.addEventListener("input", checkTextInput);
+taskInput.addEventListener("input", checkTextInput);
+
+taskButton.onclick = () => {
+  if (taskInput.value.trim() !== "") {
+    taskList.innerHTML += `
+  <li>${taskInput.value}</li>`;
+    taskInput.value = "";
+    checkTextInput();
+  }
+};
