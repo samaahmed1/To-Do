@@ -29,7 +29,7 @@ taskInput.addEventListener("input", checkTextInput);
 taskButton.onclick = () => {
   if (taskInput.value.trim() !== "") {
     taskList.innerHTML += `
-  <li>${taskInput.value}</li>`;
+  <li>${taskInput.value} <br> ${new Date().toLocaleString()}</li>`;
     taskInput.value = "";
     checkTextInput();
   }
