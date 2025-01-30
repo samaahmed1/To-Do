@@ -54,8 +54,8 @@ header .container a {
   color: var(--secondary-color);
 }
 header .container img {
-  width: 47px;
-  padding: 7px;
+  width: 40px;
+  padding: 6px;
   cursor: pointer;
   border-radius: 50px;
   background-color: var(--secondary-color);
