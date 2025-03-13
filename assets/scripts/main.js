@@ -29,8 +29,24 @@ taskInput.addEventListener("input", checkTextInput);
 taskButton.onclick = () => {
   if (taskInput.value.trim() !== "") {
     taskList.innerHTML += `
-  <li>${taskInput.value} <br> ${new Date().toLocaleString()}</li>`;
+      <li class="task">
+        <div class="info">
+          <p class="task-details">${taskInput.value}</p>
+          <p class="time"> ${new Date().toLocaleString()}</p>
+        </div>
+        <div class="action">
+          <button class="delete">delete</button>
+        </div>
+      </li>
+    `;
     taskInput.value = "";
     checkTextInput();
+
+    let deleteButtons = document.querySelectorAll(".delete");
+    let lastDeleteButton = deleteButtons[deleteButtons.length - 1];
+    lastDeleteButton.onclick = function () {
+      let li = this.closest("li");
+      li.remove();
+    };
   }
 };
